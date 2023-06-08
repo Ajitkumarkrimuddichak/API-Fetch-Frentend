@@ -236,6 +236,17 @@ Ans:- Higher Order Component is an advanced way of reusing the component logic. 
 ## 18 What are Pure Components?
 Ans:- Pure components are the simplest and fastest components which can be written.They can replace any component which only has a render(). 
 
+## What is lifecycle methods ?/ ReactJS Lifecycle of Components?
+Ans:- There are  fours stages in React.
+### Initialization:- 
+Ans:- There are two main Things like Props and State.
+### Mounting: -
+Ans:- There are three Lifecycle methodes like componentWillMount(),render() and componentDidMount()
+### Updating: - 
+Ans:- shouldComponentUpdate() , componentWillUpdate() and componentDidUpdate().
+### Unmounting: -
+Ans:- componentWillUnmount().
+
 ## 19. What is the significance of keys in React?
 Ans:- Keys are used for identifying unique Virtual DOM Elements with their corresponding data driving the UI.
 ## 20 Explain the concept of a Higher Order Component (HOC) in React ?
@@ -368,4 +379,67 @@ Ans:-Call Stack is a data structure for javascript interpreters to keep track of
 It has two major actions,
 i)Whenever you call a function for its execution, you are pushing it to the stack.
 ii)Whenever the execution is completed, the function is popped out of the stack.
+
+
+# Theory Js
+## 1 What is JavaScript Hoisting?
+Ans:- JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code.
+## 2 What is closure function ?
+Ans:- closure gives you access to an outer function's scope from an inner function. 
+## 3 Difference between Map, Reduce, and Filter JavaScript?
+Ans:- map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
+- Syntax var new_array = arr.map(function callback(element index, array) {//Return value for new_array}[,thisArg])
+
+filter() method takes each element in an array and it applies a conditional statement against it. If this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array.
+
+- Syntax :- var new_array = arr.filter(function callback(element, index, array) {
+    // Return true or false}[, thisArg])
+
+reduce() method reduces an array of values down to just one value. To get the output value, it runs a reducer function on each element of the array.
+
+- Syntax:- arr.reduce(callback[, initialValue])
+## 4 JavaScript Prototypes?
+Ans:- All JavaScript objects inherit properties and methods from a prototype.
+
+
+# Theory Js
+## 1 What is JavaScript Hoisting?
+Ans:- JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code.
+## 2 What is closure function ?
+Ans:- closure gives you access to an outer function's scope from an inner function. 
+## 3 Difference between Map, Reduce, and Filter JavaScript?
+Ans:- map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
+- Syntax var new_array = arr.map(function callback(element index, array) {//Return value for new_array}[,thisArg])
+
+filter() method takes each element in an array and it applies a conditional statement against it. If this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array.
+
+- Syntax :- var new_array = arr.filter(function callback(element, index, array) {
+    // Return true or false}[, thisArg])
+
+reduce() method reduces an array of values down to just one value. To get the output value, it runs a reducer function on each element of the array.
+
+- Syntax:- arr.reduce(callback[, initialValue])
+## 4 JavaScript Prototypes?
+Ans:- All JavaScript objects inherit properties and methods from a prototype.
+
+
+# Theory Js
+## 1 What is JavaScript Hoisting?
+Ans:- JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code.
+## 2 What is closure function ?
+Ans:- closure gives you access to an outer function's scope from an inner function. 
+## 3 Difference between Map, Reduce, and Filter JavaScript?
+Ans:- map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
+- Syntax var new_array = arr.map(function callback(element index, array) {//Return value for new_array}[,thisArg])
+
+filter() method takes each element in an array and it applies a conditional statement against it. If this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array.
+
+- Syntax :- var new_array = arr.filter(function callback(element, index, array) {
+    // Return true or false}[, thisArg])
+
+reduce() method reduces an array of values down to just one value. To get the output value, it runs a reducer function on each element of the array.
+
+- Syntax:- arr.reduce(callback[, initialValue])
+## 4 JavaScript Prototypes?
+Ans:- All JavaScript objects inherit properties and methods from a prototype.
 
