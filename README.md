@@ -250,13 +250,25 @@ Ans:- componentWillUnmount().
 ## 19. What is the significance of keys in React?
 Ans:- Keys are used for identifying unique Virtual DOM Elements with their corresponding data driving the UI.
 ## 20 Explain the concept of a Higher Order Component (HOC) in React ?
-Ans:- In React, a Higher Order Component (HOC) design is used to reuse component logic. It is a function that accepts a component as an argument and outputs a
-new component that extends the capabilities of the input component. Without having to write duplicate code, HOCs can be used to add shared features, like
-authentication and data retrieval, to various components. All of the original component’s props as well as any extra props supplied to the HOC are transferred to the wrapped component. HOCs are a potent method for composing and enhancing pre-existing components without changing their original source
-code.
+Ans:- A Higher-Order Component (HOC) is an advanced technique in React for reusing component logic. 
+HOCs are common in third-party React libraries.
+A  HOC is a function that takes a component and returns a new component.
+Syntax:- 
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+Ex:- 
+const FacebookJob = withLanguage(ReactJS)
+const Army = withArm(Men) { training }
+const Army = (Men) => { training }
+
+## what is React Router?
+Ans :- React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+Let us create a simple application to React to understand how the React Router works. The application will contain three components: home component, about a component, and contact component. We will use React Router to navigate between these components.
+
 ## 21 How do you handle routing in a React application?
 Ans:- In a React application, routing is typically handled using a library such as React Router. React Router allows you to define specific routes for different parts of your application and map them to specific components. When the user navigates to a specific route, the corresponding component is displayed on the page.For example, you could have a route for the homepage that maps to a “Home”
 component and a route for a user’s profile that maps to a “Profile” component. When the user navigates to the “/” route, the Home component would be displayed, and when they navigate to the “/profile” route, the Profile component would be displayed.
+## Need for React Router?
+Ans:- React Router is a JavaScript framework that lets us handle client and server-side routing in React applications. It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. It also allows us to use browser history features while preserving the right application view.
 ## 22 Explain the concept of a Pure Component in React?
 Ans:- A “pure component” in React is a component that updates only when its properties or state have changed. In contrast, a “non-pure component” re-renders
 each time the parent component re-renders, regardless of whether its props or state have changed. Pure components are more productive since they do not
@@ -442,4 +454,115 @@ reduce() method reduces an array of values down to just one value. To get the ou
 - Syntax:- arr.reduce(callback[, initialValue])
 ## 4 JavaScript Prototypes?
 Ans:- All JavaScript objects inherit properties and methods from a prototype.
+
+
+# **** React.js Theory ****
+## 1 Interceptors ?
+Ans:-  Intercept every request or response that is being sent by Axios Interceptors in a React application.
+
+## 2 What is lazy loading?
+Ans:- Lazy loading is a design pattern for optimizing web and mobile apps. The concept of lazy loading is simple: initialize objects that are critical to the user interface first and quietly render noncritical items later.
+
+## How to use lazy loading in React?
+Ans:- React.lazy() is a function that enables you to render a dynamic import as a regular component. Dynamic imports are a way of code-splitting, which is central to lazy loading.
+
+## Using React.lazy()
+Ans:- React.lazy() makes it easy to create components that are loaded using dynamic import() but rendered like regular components. This automatically causes the bundle containing the component to load when the component is rendered.
+
+React.lazy() takes as its argument a function that must return a promise by calling import() to load the component. The returned promise resolves to a module with a default export containing the React component.
+
+## How to manage nested routes?
+ANs:- To manage nested routes in React, you can use the React Router library, which provides a declarative way to handle routing in your application. Here's a step-by-step guide on how to manage nested routes using React Router
+
+### 1.
+Install React Router: Start by installing the React Router library using npm or Yarn. Open your terminal and run one of the following commands:
+- npm install react-router-dom
+### 2.
+Set up the Router: In your main application file (often App.js), import the necessary components from React Router:
+- import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+Wrap your entire application with the Router component:
+
+function App() {
+  return (
+    <Router>
+      {/* Your application components */}
+    </Router>
+  );
+}
+### 3.
+Define your routes: Inside the Router, define your routes using the Route component. You can nest routes by placing Route components within each other. For example:
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/products" component={Products} />
+        <Route path="/about" component={About} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
+  );
+}
+In this example, the /products route is nested within the main route /.
+### 4.
+Create nested routes: To create nested routes, define additional Route components within the component that corresponds to the parent route. For example, in the Products component, you can define nested routes as follows:
+
+function Products() {
+  return (
+    <div>
+      {/* Other components and content for       the  Products page */}
+      <Switch>
+        <Route exact path="/products" component={ProductList} />
+        <Route path="/products/:id" component={ProductDetails} />
+        <Route component={ProductNotFound} />
+      </Switch>
+    </div>
+  );
+}
+In this example, the /products/:id route is nested within the /products route.
+
+### 5.
+Access nested route parameters: If you have nested routes with parameters, you can access them using the useParams hook provided by React Router. For example, in the ProductDetails component, you can access the id parameter as follows:
+
+import { useParams } from 'react-router-dom';
+
+function ProductDetails() {
+  const { id } = useParams();
+
+  // Use the `id` parameter in your component logic
+  // ...
+
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+}
+The useParams hook returns an object containing the parameters specified in the route.
+
+That's it! With these steps, you can manage nested routes in your React application using React Router. Make sure to import the necessary components and wrap your routes in the Router component to enable routing functionality.
+## Q What is hooks?
+Ans:- Hooks in three category.First one will be like basic hooks like  useState , useEffect and useContext, after that there will be sum additional hooks like useReducer,useMemo , useRef and there is also.
+## Q React Custom Hooks?
+Ans:- When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
+- Custom Hooks start with "use". Example: useFetch.
+## How to Update a component in avery second?
+Ans:- we can used set interval method in useEffect hook you can Update component.
+## How be can pass data between chield to parent component? and parent to chield?
+Ans:- Passing data parent to chiled we can used props.
+Ans:- Chield to parent we can used call back function and we can used call back function in parent component and then can be send data is a props.
+- Not:- React data flowing from one direction only.
+## How to pass data in sibling component?
+Ans:- By using react router we can do that.
+- there are two things.
+- 1:-history.push.
+- 2:-match.params.
+
+# **** projects explaine ****
+
+## Can yuo explaine in job role in your current company?
+Ans:- Currently, I am working as a full-stack developer, handling frontend and backend, so I have done three projects. The first one was a domain project, so it was started from scratch, and I was handling the UI part. It was basically about handling employee data, so where that employee can login with the employee ID and give one specific password, they can login, check, and apply for leaves from Portel. And after that, I am working on KDA and HRI client projects, so where am I handling that UI part and adding some features?
+## like :-
+- Search box , Calender , Chart Graphs , video player , popup window , Accordin , Animated sliders , Dropdow menu , Zoom Effect , Login page and Pegistration fome.
 
